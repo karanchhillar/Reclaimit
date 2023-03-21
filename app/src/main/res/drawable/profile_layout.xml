@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Change the color and size of the stroke as desired -->
+    <stroke
+        android:width="4dp"
+        android:color="@android:color/white" />
+
+    <!-- Change the color and size of the background as desired -->
+    <solid android:color="#FFC107" />
+
+</shape>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">E-Waste</string>
+    <string name="title_activity_main_app">MainApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_landing_page">landing_page</string>
+    <string name="title_activity_work_space">WorkSpace</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_leaderboard">Leaderdoard</string>
+    <string name="title_order">Order</string>
+    <string name="title_profile">Profile</string>
+    <string name="affirmation1">I am strong.</string>
+
+
+    <!--    <string name="default_web_client_id">172868184902-kndflmh6a9cs8ri4qvfifks86rfe5o92.apps.googleusercontent.com</string>-->
+</resources>
