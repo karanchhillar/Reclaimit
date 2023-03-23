@@ -54,10 +54,7 @@
                         android:padding="16dp"
                         android:textAppearance="?attr/textAppearanceHeadline6" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/plus_imag"/>
+
 
                 </LinearLayout>
 
@@ -100,10 +97,6 @@
                         android:textColor="@color/black"
                         android:textAppearance="?attr/textAppearanceHeadline6" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/plus_imag"/>
 
                 </LinearLayout>
 
