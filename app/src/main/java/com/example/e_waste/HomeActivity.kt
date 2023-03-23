@@ -19,10 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
-//hellokaran
-//hellokaran69
-//hellomadhav
-//hellomadhav23
+// i am here
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
