@@ -52,6 +52,7 @@ class OrderFragment : Fragment() {
         val checkoutButton = view.findViewById<Button>(R.id.checkout_button)
         val list = view.findViewById<EditText>(R.id.itemlist)
         val address = view.findViewById<EditText>(R.id.sendaddress)
+        val contact = view.findViewById<EditText>(R.id.phoneno)
         val pincode = view.findViewById<EditText>(R.id.pincode)
         val collection_date = view.findViewById<TextView>(R.id.dateofc)
         val coll_btn = view.findViewById<Button>(R.id.coll_date_btn)
@@ -64,9 +65,10 @@ class OrderFragment : Fragment() {
             val items = list.text.toString()
             val collec_add = address.text.toString()
             val pin = pincode.text.toString()
+            val phono = contact.text.toString()
             val coll_date = collection_date.text.toString()
 
-            if (items.isEmpty() || collec_add.isEmpty() || pin.isEmpty() || coll_date.isEmpty() ){
+            if (items.isEmpty() || collec_add.isEmpty() || pin.isEmpty() || coll_date.isEmpty() || phono.isEmpty()){
                 Toast.makeText(activity, "You cannot leave any Field EMPTY", Toast.LENGTH_SHORT)
                     .show()
                 return@setOnClickListener
@@ -80,6 +82,7 @@ class OrderFragment : Fragment() {
                 pin,
                 coll_date,
                 auth.uid.toString(),
+                phono,
                 System.currentTimeMillis().toString()
 
             )

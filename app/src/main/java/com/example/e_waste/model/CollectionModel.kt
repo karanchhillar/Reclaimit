@@ -7,6 +7,7 @@ data class CollectionModel(
     val user_pincode : String? = "",
     val coll_date : String? = "",
     val uid : String? = "",
+    val phono : String? = "",
     val id : String? = ""
 
 )
