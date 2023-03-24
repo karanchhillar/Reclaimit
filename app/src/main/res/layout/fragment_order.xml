@@ -3,22 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:backgroundTint="@color/white"
-    android:background="@color/white"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
     android:orientation="vertical">
 
     <!-- Header -->
-    <TextView
-        android:id="@+id/header_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blue"
-        android:padding="16dp"
-        android:text="Your Order"
-        android:textColor="@color/white"
-        android:textSize="32sp"
+    <ImageView
+        android:id="@+id/your_order"
+        android:layout_width="wrap_content"
+        android:layout_height="170dp"
+        android:src="@drawable/yours_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/header_text"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@color/blue"-->
+    <!--        android:padding="16dp"-->
+    <!--        android:text="Your Order"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="32sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <!-- RecyclerView -->
 
@@ -31,9 +44,9 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="35dp"
         android:layout_weight="1"
+        android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="Items"
-        android:background="@drawable/rounded_corner"
         android:inputType="textAutoComplete"
         android:padding="10dp"
         android:paddingTop="200dp"
@@ -42,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_text" />
+        app:layout_constraintTop_toBottomOf="@+id/your_order" />
 
     <EditText
         android:id="@+id/sendaddress"
@@ -50,12 +63,12 @@
         android:layout_height="50dp"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="35dp"
-        android:background="@drawable/rounded_corner"
         android:layout_weight="1"
-        android:padding="10dp"
+        android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="Address"
         android:inputType="textAutoComplete"
+        android:padding="10dp"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -69,11 +82,11 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="35dp"
         android:layout_weight="1"
-        android:padding="10dp"
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="Pincode"
         android:inputType="number"
+        android:padding="10dp"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -101,6 +114,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="19dp"
+        android:backgroundTint="@color/login_btn"
         android:text="set date"
         app:layout_constraintStart_toEndOf="@+id/dateofc"
         app:layout_constraintTop_toBottomOf="@+id/pincode" />
@@ -110,10 +124,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="@color/coin3"
         android:padding="16dp"
         android:text="Confirm collection"
-
+        android:backgroundTint="@color/color12"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
