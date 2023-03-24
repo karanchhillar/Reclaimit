@@ -61,12 +61,16 @@ class OrderFragment : Fragment() {
 
 
         checkoutButton.setOnClickListener {
-
             val items = list.text.toString()
             val collec_add = address.text.toString()
             val pin = pincode.text.toString()
             val coll_date = collection_date.text.toString()
 
+            if (items.isEmpty() || collec_add.isEmpty() || pin.isEmpty() || coll_date.isEmpty() ){
+                Toast.makeText(activity, "You cannot leave any Field EMPTY", Toast.LENGTH_SHORT)
+                    .show()
+                return@setOnClickListener
+            }
 
             database = FirebaseDatabase.getInstance()
 
@@ -82,45 +86,27 @@ class OrderFragment : Fragment() {
             database.reference.child("COLLECTION DEATILS").child(System.currentTimeMillis().toString()).setValue(detail)
                 .addOnSuccessListener {
                     Toast.makeText(activity, "YOUR COLLECTION IS CONFIRMED \n CONTACT YOU SOON", Toast.LENGTH_LONG).show()
-
-
-
-
-
-
-
+                }.addOnFailureListener {
+                    Toast.makeText(activity, "Something went wrong", Toast.LENGTH_SHORT).show()
                 }
-//            homeactivity2170
         }
 
         val calenderdate = Calendar.getInstance()
         val datePicker = DatePickerDialog.OnDateSetListener { view, year, month, dateofMonth ->
-
-
             calenderdate.set(Calendar.YEAR,year)
             calenderdate.set(Calendar.MONTH,month)
             calenderdate.set(Calendar.DAY_OF_MONTH,dateofMonth)
-
             updatedatelabel(calenderdate,collection_date)
-
         }
-
-
-
-
         coll_btn.setOnClickListener {
-
             DatePickerDialog(
                 requireContext(),
                 datePicker,
                 calenderdate.get(Calendar.YEAR),
                 calenderdate.get(Calendar.MONTH),
                 calenderdate.get(Calendar.DAY_OF_MONTH),
-
-
                 ).show()
 //            updatedatelabel(calenderdate,collection_date)
-
         }
 //        updatedatelabel(calenderdate,collection_date)
 //        deleteButton = view.findViewById(R.id.delete_button)
