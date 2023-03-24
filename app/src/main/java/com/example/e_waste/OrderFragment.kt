@@ -31,9 +31,9 @@ class OrderFragment : Fragment() {
         val view =  inflater.inflate(R.layout.fragment_order, container, false)
 
 //        recyclerView = view.findViewById(R.id.your_order_recycler_view)
-        checkoutButton = view.findViewById(R.id.checkout_button)
         // codde here
 
+        checkoutButton = view.findViewById(R.id.checkout_button)
 
 
         // code here
