@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical">
 
     <!-- Header -->
@@ -9,30 +12,114 @@
         android:id="@+id/header_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Order"
-        android:textSize="32sp"
-        android:textColor="@color/white"
         android:background="@color/blue"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:text="Your Order"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/your_order_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="16dp"/>
 
     <!-- Checkout Button -->
+
+    <EditText
+        android:id="@+id/itemlist"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Items"
+        android:inputType="textAutoComplete"
+        android:padding="10dp"
+        android:paddingTop="200dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_text" />
+
+    <EditText
+        android:id="@+id/sendaddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="32dp"
+
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textAutoComplete"
+        android:textColorHint="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemlist" />
+
+    <EditText
+        android:id="@+id/pincode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="35dp"
+        android:layout_weight="1"
+
+        android:ems="10"
+        android:hint="Pincode"
+        android:inputType="number"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendaddress" />
+
+    <TextView
+        android:id="@+id/dateofc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="10dp"
+        android:ems="10"
+        android:hint="collection date"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:inputType="date"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/coll_date_btn"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/coll_date_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:text="set date"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pincode" />
+
     <Button
         android:id="@+id/checkout_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Checkout"
-        android:textColor="@color/white"
-        android:background="@color/blue"
-        android:textSize="20sp"
+        android:layout_margin="16dp"
+        android:background="@color/coin3"
         android:padding="16dp"
-        android:layout_margin="16dp"/>
+        android:text="Confirm collection"
 
-</LinearLayout>
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateofc"
+        app:layout_constraintVertical_bias="0.89" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
