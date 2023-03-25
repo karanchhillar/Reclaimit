@@ -68,7 +68,7 @@
         android:ems="10"
         android:hint="Phone no"
         android:layout_marginTop="31dp"
-        android:inputType="textAutoComplete"
+        android:inputType="phone"
         android:padding="10dp"
         android:paddingTop="200dp"
         android:textColor="@color/black"
