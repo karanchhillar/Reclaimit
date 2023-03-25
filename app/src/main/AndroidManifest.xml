@@ -18,7 +18,7 @@
         android:theme="@style/Theme.EWaste"
         tools:targetApi="31">
         <activity
-            android:name=".OrdersAdapter"
+            android:name=".orders.OrdersAdapter"
             android:exported="false" />
         <activity
             android:name=".scrap_rate_image.ScrapRateImageRecycler"
@@ -26,8 +26,9 @@
         <activity
             android:name=".scrap_rate_recycler"
             android:exported="false" />
-        <activity android:windowSoftInputMode="adjustPan"
-            android:name=".orders.OrdersAdapter" />
+<!--        <activity android:windowSoftInputMode="adjustPan"-->
+<!--            android:name=".orders.OrdersAdapter"-->
+<!--            tools:ignore="DuplicateActivity" />-->
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
