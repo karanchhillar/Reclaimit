@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -15,22 +15,23 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EWaste"
+        android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
-        <activity
-            android:name=".Slash_screen"
-            android:exported="false" />
-        <activity
-            android:name=".orders.OrdersAdapter"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".orders.OrdersAdapter"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".scrap_rate_image.ScrapRateImageRecycler"
+            android:theme="@style/Theme.EWaste"
             android:exported="false" />
         <activity
             android:name=".scrap_rate_recycler"
-            android:exported="false" /> <!-- <activity android:windowSoftInputMode="adjustPan" -->
-        <!-- android:name=".orders.OrdersAdapter" -->
-        <!-- tools:ignore="DuplicateActivity" /> -->
+            android:theme="@style/Theme.EWaste"
+            android:exported="false" />
+        <activity android:windowSoftInputMode="adjustPan"
+            android:name=".orders.OrdersAdapter"
+            android:theme="@style/Theme.EWaste"
+            tools:ignore="DuplicateActivity" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -48,22 +49,28 @@
 
         <activity
             android:name=".Work"
+            android:theme="@style/Theme.EWaste"
             android:exported="false" />
         <activity
             android:name=".HomeActivity2"
+            android:theme="@style/Theme.EWaste"
             android:exported="false" />
         <activity
             android:name=".LandingPage"
+            android:theme="@style/Theme.EWaste"
             android:exported="false"
             android:label="@string/title_activity_landing_page" />
         <activity
             android:name=".HomeActivity"
+            android:theme="@style/Theme.EWaste"
             android:exported="false" />
         <activity
             android:name=".SignUp"
+            android:theme="@style/Theme.EWaste"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:theme="@style/Theme.EWaste"
             android:exported="true">
             <intent-filter>
 
