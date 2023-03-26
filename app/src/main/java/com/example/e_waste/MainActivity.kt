@@ -42,9 +42,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        installSplashScreen().apply {
-            true
-        }
+
         setContentView(R.layout.activity_main)
         progressBar = findViewById(R.id.main_activity_progressbar)
         progressBar.visibility = View.VISIBLE
