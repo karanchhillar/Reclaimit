@@ -41,8 +41,6 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         setContentView(R.layout.activity_main)
         progressBar = findViewById(R.id.main_activity_progressbar)
         progressBar.visibility = View.VISIBLE
